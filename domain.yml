@@ -1,0 +1,112 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ecommerce_inquiry
+  - ecommerce_order_status
+  - ecommerce_product_info
+  - ecommerce_return_refund
+  - ecommerce_shipping
+  - ecommerce_payment
+  - banking_inquiry
+  - banking_balance
+  - banking_transaction
+  - banking_transfer
+  - banking_loan
+  - banking_card
+  - banking_account
+  - banking_help
+  - nlu_fallback
+
+entities:
+  - order_number
+  - product_name
+  - account_number
+  - amount
+  - branch_type
+  - inquiry_type
+
+slots:
+  branch_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: branch_type
+  inquiry_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: inquiry_type
+
+responses:
+  utter_greet:
+  - text: "Hello! I'm your AI assistant. I can help you with both ecommerce and banking inquiries. Which service do you need help with today?"
+
+  utter_goodbye:
+  - text: "Thank you for using our services! Have a great day!"
+
+  utter_iamabot:
+  - text: "I am an AI assistant created to help you with ecommerce and banking inquiries."
+
+  utter_mood_great:
+  - text: "Great! I'm here to help you with any ecommerce or banking questions you might have."
+
+  utter_mood_unhappy:
+  - text: "I'm sorry to hear that. Let me help you resolve any issues you're facing with our services."
+
+  utter_ecommerce_greeting:
+  - text: "Welcome to our ecommerce support! I can help you with order status, product information, returns, shipping, and payment questions."
+
+  utter_banking_greeting:
+  - text: "Welcome to our banking support! I can help you with account balance, transactions, transfers, loans, and card-related inquiries."
+
+  utter_ecommerce_order_status:
+  - text: "I'd be happy to help you check your order status. Could you please provide your order number?"
+
+  utter_ecommerce_product_info:
+  - text: "I can help you with product information. What specific product are you looking for?"
+
+  utter_ecommerce_return_refund:
+  - text: "I can assist you with returns and refunds. Please let me know what you'd like to return and I'll guide you through the process."
+
+  utter_ecommerce_shipping:
+  - text: "I can help you with shipping questions. What would you like to know about shipping options or delivery times?"
+
+  utter_ecommerce_payment:
+  - text: "I can help you with payment-related questions. What payment issue are you experiencing?"
+
+  utter_banking_balance:
+  - text: "I can help you check your account balance. For security purposes, I'll need to verify your account information first."
+
+  utter_banking_transaction:
+  - text: "I can help you with transaction inquiries. What specific transaction information do you need?"
+
+  utter_banking_transfer:
+  - text: "I can assist you with money transfers. What type of transfer would you like to make?"
+
+  utter_banking_loan:
+  - text: "I can help you with loan-related inquiries. Are you looking to apply for a new loan or have questions about an existing one?"
+
+  utter_banking_card:
+  - text: "I can help you with card-related issues. What's the problem with your card?"
+
+  utter_banking_account:
+  - text: "I can help you with account-related questions. What would you like to know about your account?"
+
+  utter_help:
+  - text: "I can help you with:\n\nEcommerce:\n- Order status and tracking\n- Product information\n- Returns and refunds\n- Shipping questions\n- Payment issues\n\nBanking:\n- Account balance\n- Transaction history\n- Money transfers\n- Loan inquiries\n- Card services\n- Account management\n\nWhat would you like help with?"
+
+  utter_default:
+  - text: "I'm sorry, I didn't understand that. Could you please rephrase your question? I can help you with ecommerce or banking inquiries."
+
+actions:
+  - action_ecommerce_order_lookup
+  - action_banking_balance_check
+  - action_banking_transfer
+  - action_ecommerce_product_search
