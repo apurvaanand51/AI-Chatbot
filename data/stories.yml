@@ -1,0 +1,132 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_mood_great
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_mood_unhappy
+
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: ecommerce order status inquiry
+  steps:
+  - intent: ecommerce_inquiry
+  - action: utter_ecommerce_greeting
+  - intent: ecommerce_order_status
+  - action: utter_ecommerce_order_status
+  - action: action_ecommerce_order_lookup
+
+- story: ecommerce product information
+  steps:
+  - intent: ecommerce_inquiry
+  - action: utter_ecommerce_greeting
+  - intent: ecommerce_product_info
+  - action: utter_ecommerce_product_info
+  - action: action_ecommerce_product_search
+
+- story: ecommerce return and refund
+  steps:
+  - intent: ecommerce_inquiry
+  - action: utter_ecommerce_greeting
+  - intent: ecommerce_return_refund
+  - action: utter_ecommerce_return_refund
+
+- story: ecommerce shipping inquiry
+  steps:
+  - intent: ecommerce_inquiry
+  - action: utter_ecommerce_greeting
+  - intent: ecommerce_shipping
+  - action: utter_ecommerce_shipping
+
+- story: ecommerce payment issue
+  steps:
+  - intent: ecommerce_inquiry
+  - action: utter_ecommerce_greeting
+  - intent: ecommerce_payment
+  - action: utter_ecommerce_payment
+
+- story: banking balance inquiry
+  steps:
+  - intent: banking_inquiry
+  - action: utter_banking_greeting
+  - intent: banking_balance
+  - action: utter_banking_balance
+  - action: action_banking_balance_check
+
+- story: banking transaction history
+  steps:
+  - intent: banking_inquiry
+  - action: utter_banking_greeting
+  - intent: banking_transaction
+  - action: utter_banking_transaction
+
+- story: banking money transfer
+  steps:
+  - intent: banking_inquiry
+  - action: utter_banking_greeting
+  - intent: banking_transfer
+  - action: utter_banking_transfer
+  - action: action_banking_transfer
+
+- story: banking loan inquiry
+  steps:
+  - intent: banking_inquiry
+  - action: utter_banking_greeting
+  - intent: banking_loan
+  - action: utter_banking_loan
+
+- story: banking card issue
+  steps:
+  - intent: banking_inquiry
+  - action: utter_banking_greeting
+  - intent: banking_card
+  - action: utter_banking_card
+
+- story: banking account inquiry
+  steps:
+  - intent: banking_inquiry
+  - action: utter_banking_greeting
+  - intent: banking_account
+  - action: utter_banking_account
+
+- story: general help request
+  steps:
+  - intent: banking_help
+  - action: utter_help
+
+- story: ecommerce to banking switch
+  steps:
+  - intent: ecommerce_inquiry
+  - action: utter_ecommerce_greeting
+  - intent: banking_inquiry
+  - action: utter_banking_greeting
+
+- story: banking to ecommerce switch
+  steps:
+  - intent: banking_inquiry
+  - action: utter_banking_greeting
+  - intent: ecommerce_inquiry
+  - action: utter_ecommerce_greeting
+
+- story: fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
