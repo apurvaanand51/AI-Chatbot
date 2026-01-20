@@ -1,0 +1,229 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good afternoon
+    - good evening
+    - greetings
+    - howdy
+
+- intent: goodbye
+  examples: |
+    - goodbye
+    - bye
+    - see you later
+    - talk to you later
+    - have a good day
+    - take care
+    - farewell
+
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - yep
+    - sure
+    - of course
+    - that sounds good
+    - correct
+    - right
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - not really
+    - don't think so
+    - incorrect
+    - wrong
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I'm good
+
+- intent: mood_unhappy
+  examples: |
+    - sad
+    - very sad
+    - unhappy
+    - bad
+    - terrible
+    - awful
+    - not very good
+    - extremely sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ecommerce_inquiry
+  examples: |
+    - I need help with my order
+    - I have an ecommerce question
+    - help with shopping
+    - I need support for my purchase
+    - ecommerce support
+    - shopping help
+    - order help
+    - I bought something online
+
+- intent: ecommerce_order_status
+  examples: |
+    - where is my order?
+    - order status
+    - track my order
+    - when will my order arrive?
+    - order number [12345](order_number)
+    - check order [ORD-123](order_number)
+    - my order [456789](order_number) status
+    - tracking order [789012](order_number)
+
+- intent: ecommerce_product_info
+  examples: |
+    - tell me about this product
+    - product information
+    - what is this item?
+    - product details
+    - tell me about [laptop](product_name)
+    - information about [smartphone](product_name)
+    - details for [headphones](product_name)
+    - specs for [tablet](product_name)
+
+- intent: ecommerce_return_refund
+  examples: |
+    - I want to return this
+    - return policy
+    - how to return an item?
+    - refund request
+    - I want a refund
+    - return this product
+    - can I return this?
+    - return process
+
+- intent: ecommerce_shipping
+  examples: |
+    - shipping information
+    - delivery time
+    - when will it be delivered?
+    - shipping options
+    - delivery status
+    - shipping cost
+    - free shipping
+    - express delivery
+
+- intent: ecommerce_payment
+  examples: |
+    - payment issue
+    - payment problem
+    - payment failed
+    - billing question
+    - charge dispute
+    - payment method
+    - payment not processed
+
+- intent: banking_inquiry
+  examples: |
+    - I need banking help
+    - banking support
+    - account question
+    - financial inquiry
+    - bank services
+    - I have a banking question
+    - help with my account
+    - banking assistance
+
+- intent: banking_balance
+  examples: |
+    - check my balance
+    - account balance
+    - how much money do I have?
+    - current balance
+    - balance inquiry
+    - check balance for account [123456](account_number)
+    - balance of account [789012](account_number)
+
+- intent: banking_transaction
+  examples: |
+    - transaction history
+    - recent transactions
+    - show my transactions
+    - transaction details
+    - payment history
+    - transaction inquiry
+    - last few transactions
+    - transaction records
+
+- intent: banking_transfer
+  examples: |
+    - transfer money
+    - send money
+    - wire transfer
+    - transfer funds
+    - send [100](amount) dollars
+    - transfer [500](amount) to another account
+    - money transfer
+    - send payment
+
+- intent: banking_loan
+  examples: |
+    - loan application
+    - apply for loan
+    - loan information
+    - personal loan
+    - home loan
+    - car loan
+    - loan rates
+    - loan eligibility
+
+- intent: banking_card
+  examples: |
+    - card problem
+    - credit card issue
+    - debit card not working
+    - card blocked
+    - card replacement
+    - card activation
+    - card declined
+    - card services
+
+- intent: banking_account
+  examples: |
+    - account information
+    - account details
+    - account services
+    - account management
+    - account settings
+    - account inquiry
+    - account help
+    - account options
+
+- intent: banking_help
+  examples: |
+    - what can you help me with?
+    - banking services
+    - help with banking
+    - what banking services are available?
+    - financial help
+
+- intent: nlu_fallback
+  examples: |
+    - asdfghjkl
+    - qwerty
+    - 123456789
+    - random text
+    - gibberish
+    - nonsense
